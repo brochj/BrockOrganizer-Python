@@ -10,7 +10,7 @@ all_files = os.listdir('./') # Lista todos os itens na pasta onde está o Script
 
 executaveis = ['.exe' , '.msi']
 imagens = ['.jpeg', '.jpg', '.tiff', '.gif', '.bmp', '.png', '.PNG', '.bpg', '.svg', '.heif', '.psd']
-documentos = ['.epub', '.pages', '.docx', '.doc', '.fdf', '.ods','.odt','.xps', '.dotx', '.docm', '.dox','.xls', '.xlsx', '.ppt','.pptx']
+documentos = ['.txt', '.epub', '.pages', '.docx', '.doc', '.fdf', '.ods','.odt','.xps', '.dotx', '.docm', '.dox','.xls', '.xlsx', '.ppt','.pptx']
 pdfs = ['.pdf']
 compactados = ['.rar','.zip','.7z','.bzip2','.gzip','.tar','.wim','.xz',]
 scripts = ['.ahk', '.py']
