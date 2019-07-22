@@ -38,7 +38,7 @@ def getFilesList(path):
 def printAllUserFiles(allFilesArray):
     print('List of files and folders found:\n')
     for i in range(0, len(allFilesArray)):
-        print('{}'.format(allFilesArray[i]))
+        print(f'{allFilesArray[i]}')
     return
 
 
@@ -58,7 +58,7 @@ def moveFileToDestinyFolder(fileName, destinyFolderName):
 def organizer(fileName, destinyFolderName):
     createDestinyFolder(destinyFolderName)
     moveFileToDestinyFolder(fileName, destinyFolderName)
-    print('moved << {} >>'.format(fileName))
+    print(f'moved << {fileName} >>')
     return
 
 
