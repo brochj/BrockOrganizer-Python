@@ -2,7 +2,7 @@
 """
 @author: Oscar Broch Jr. - https://github.com/brochj
 Created on Sun May 27 13:25:42 2018
-Last Update: July 21, 2019
+Last Update: August 06, 2019
 based on: https://www.geeksforgeeks.org/junk-file-organizer-python/
 """
 
@@ -25,58 +25,58 @@ EXTENSIONS = {
 }
 
 
-def printHeader():
+def print_header():
     print('Organizer Files - Python [v0.0.2 - July 22, 2019]\n')
     print('author: Oscar Broch Jr. - https://github.com/brochj\n')
     return
 
 
-def getFilesList(path):
+def get_files_list(path):
     return os.listdir(path)
 
 
-def printAllUserFiles(allFilesArray):
+def print_all_user_files(all_files_array):
     print('List of files and folders found:\n')
-    for i in range(0, len(allFilesArray)):
-        print(f'{allFilesArray[i]}')
+    for i in range(0, len(all_files_array)):
+        print(f'{all_files_array[i]}')
     return
 
 
-def createDestinyFolder(fileFolder):
-    if not os.path.exists(fileFolder):
-        os.makedirs(fileFolder)
+def create_destiny_folder(file_folder):
+    if not os.path.exists(file_folder):
+        os.makedirs(file_folder)
 
 
-def moveFileToDestinyFolder(fileName, destinyFolderName):
+def move_file_to_destiny_folder(file_name, destiny_folder_name):
     try:
-        os.rename(os.path.join('./', fileName),
-                  os.path.join(destinyFolderName, fileName))
+        os.rename(os.path.join('./', file_name),
+                    os.path.join(destiny_folder_name, file_name))
     except:
         pass
 
 
-def organizer(fileName, destinyFolderName):
-    createDestinyFolder(destinyFolderName)
-    moveFileToDestinyFolder(fileName, destinyFolderName)
-    print(f'moved << {fileName} >>')
+def organizer(file_name, destiny_folder_name):
+    create_destiny_folder(destiny_folder_name)
+    move_file_to_destiny_folder(file_name, destiny_folder_name)
+    print(f'moved << {file_name} >>')
     return
 
 
-def extractFileExtension(fileName):
-    return str(fileName[fileName.rfind('.'):])
+def extract_file_extension(file_name):
+    return str(file_name[file_name.rfind('.'):])
 
 
 def main():
-    printHeader()
-    allUserFiles = getFilesList(PATH)
-    printAllUserFiles(allUserFiles)
-    for fileName in allUserFiles:
-        userFileExtension = extractFileExtension(fileName)
+    print_header()
+    all_user_files = get_files_list(PATH)
+    print_all_user_files(all_user_files)
+    for file_name in all_user_files:
+        user_file_extension = extract_file_extension(file_name)
 
-        for fileType, extensionsList in EXTENSIONS.items():
-            for extension in extensionsList:
-                if userFileExtension == extension:
-                    organizer(fileName, fileType.capitalize())
+        for file_type, extensions_list in EXTENSIONS.items():
+            for extension in extensions_list:
+                if user_file_extension == extension:
+                    organizer(file_name, file_type.capitalize())
 
     print('\nYour files are now organized! =) \n')
     return
