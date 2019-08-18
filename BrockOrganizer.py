@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
 @author: Oscar Broch Jr. - https://github.com/brochj
@@ -8,7 +9,7 @@ and
 https://automatetheboringstuff.com/chapter9/
 """
 
-import os, shutil
+import os
 
 PATH = './'
 # File extensions that will be organized
