@@ -4,9 +4,11 @@
 Created on Sun May 27 13:25:42 2018
 Last Update: August 06, 2019
 based on: https://www.geeksforgeeks.org/junk-file-organizer-python/
+and
+https://automatetheboringstuff.com/chapter9/
 """
 
-import os
+import os, shutil
 
 PATH = './'
 # File extensions that will be organized
@@ -63,20 +65,15 @@ def organizer(file_name, destiny_folder_name):
     return
 
 
-def extract_file_extension(file_name):
-    return str(file_name[file_name.rfind('.'):])
-
-
 def main():
     print_header()
     all_user_files = get_files_list(PATH)
     print_all_user_files(all_user_files)
     for file_name in all_user_files:
-        user_file_extension = extract_file_extension(file_name)
 
         for file_type, extensions_list in EXTENSIONS.items():
             for extension in extensions_list:
-                if user_file_extension == extension:
+                if file_name.endswith(extension):
                     organizer(file_name, file_type.capitalize())
 
     print('\nYour files are now organized! =) \n')
