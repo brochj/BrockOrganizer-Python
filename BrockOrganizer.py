@@ -7,6 +7,7 @@ based on: https://www.geeksforgeeks.org/junk-file-organizer-python/
 """
 
 import os
+from gui import GUI
 
 PATH = './'
 # File extensions that will be organized
@@ -68,8 +69,9 @@ def extract_file_extension(file_name):
 
 
 def main():
+    gui = GUI()
     print_header()
-    all_user_files = get_files_list(PATH)
+    all_user_files = get_files_list(gui.path)
     print_all_user_files(all_user_files)
     for file_name in all_user_files:
         user_file_extension = extract_file_extension(file_name)
