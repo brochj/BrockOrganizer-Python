@@ -25,7 +25,7 @@ class GUI:
             
             [sg.Submit('Organize Files'), sg.Cancel()],
             ]
-        window = sg.Window('Select the paste', layout)
+        window = sg.Window('Brock Organizer - Select the folder', layout)
         # self.event, self.values = window.read()
         # self.path = self.values[0]
         

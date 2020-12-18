@@ -42,6 +42,7 @@ EXTENSIONS = {
         ".wmv",
     ],
     "DOCUMENTS": [
+        ".accdb",
         ".doc",
         ".docm",
         ".docx",
@@ -70,7 +71,7 @@ EXTENSIONS = {
         ".wim",
         ".xz",
     ],
-    "SCRIPTS": [".ahk", ".js", ".json"],
+    "SCRIPTS": [".ahk", ".js", ".json", ".mq5"],
     # "NEW FOLDER 1": [".whatever", ".extension", ".you", "want"]
 }
 
@@ -139,3 +140,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    input('Press any key to exit')
+# TODO Create an "Undo" feature 
