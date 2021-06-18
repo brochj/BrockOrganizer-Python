@@ -79,7 +79,6 @@ EXTENSIONS = {
 def print_header():
     print("Brock Organizer Files - Python [v0.0.3 - Dec 18, 2020]\n")
     print("author: Oscar Broch Jr. - https://github.com/brochj\n")
-    
 
 
 def get_files_list(path):
@@ -90,7 +89,6 @@ def print_all_user_files(all_files_array):
     print("List of files and folders found:\n")
     for i in range(0, len(all_files_array)):
         print(f"{all_files_array[i]}")
-    
 
 
 def create_destiny_folder(file_folder):
@@ -115,11 +113,9 @@ def organizer(path, file_name, destiny_folder):
     create_destiny_folder(os.path.join(path, destiny_folder.capitalize()))
     move_file_to_destiny_folder(path, file_name, destiny_folder)
 
-    
-
 
 def extract_file_extension(file_name):
-    return str(file_name[file_name.rfind(".") :])
+    return str(file_name[file_name.rfind("."):])
 
 
 def main():
@@ -135,10 +131,10 @@ def main():
                 if user_file_extension == extension:
                     organizer(gui.path, file_name, file_type)
     print("\nYour files are now organized! =) \n")
-    
+
 
 
 if __name__ == "__main__":
     main()
     input('Press any key to exit')
-# TODO Create an "Undo" feature 
+# TODO Create an "Undo" feature
